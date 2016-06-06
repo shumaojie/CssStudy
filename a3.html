@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		window.onerror=function(msg,url,line)
+		{
+			if(onerror.num++<onerror.max)
+			{
+				alert("ERROR:"+msg+"\n"+url+":"+line);
+				return true;
+				
+			}
+			
+			
+			
+			
+			
+			
+		}
+			
+		onerror.max=3;
+		onerror.num=0;
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

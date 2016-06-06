@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<link href="css/main.css" rel="stylesheet" />
+		<style type="text/css">
+			@import url("css/mystylesheet.css");
+			/*body {
+				font-family: verdana, arial, sans-serif;
+				font-size: 3em;
+			}
+			
+			h3 {
+				font-size: 2em;
+				font-style: italic;
+				background-color: bisque;
+			}
+			
+			span {
+				font-style: oblique;
+			}
+			
+			div #column {
+				width: 17px;
+				padding: 10px;
+			}*/
+			
+			#multi_drop_menus li {
+				border: 2px solid blue;
+				list-style-type: none;
+				float: left;
+				position: relative;
+			}
+			
+			#multi_drop_menus li ul {
+				position: absolute;
+				width: 7em;
+			}
+			
+			#multi_drop_menus li ul li {
+				width: 100%;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			
+			a,
+			img {
+				border: 0;
+				text-decoration: none;
+			}
+			
+			body {
+				font: 12px/180% Arial, Helvetica, sans-serif, "";
+			}
+			/* advbox */
+			
+			*html,
+			*html body {
+				background-image: url(about:blank);
+				background-attachment: fixed;
+			}
+			
+			*html .advbox {
+				position: absolute;
+				//top: expression(eval(document.documentElement.scrollTop));
+			}
+			
+			.advbox {
+				width: 670px;
+				position: fixed;
+				display: none;
+				left: 50%;
+				top: 0;
+				margin: -215px 0 0 -325px;
+			}
+			
+			.advbox .advpic {
+				position: relative;
+				height: 420px;
+				overflow: hidden;
+			}
+			
+			.advbox .advpic .closebtn {
+				display: block;
+				width: 40px;
+				height: 20px;
+				line-height: 20px;
+				font-size: 12px;
+				color: #fff;
+				text-indent: 12px;
+				overflow: hidden;
+				position: absolute;
+				right: 5px;
+				top: 0px;
+				z-index: 99;
+			}
+		</style>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+//				var COOKIE_NAME = "showbox";
+//				if ($.cookie(COOKIE_NAME)) {
+//					$(".advbox").hide();
+//				} else {
+					$(".advbox").show();
+					$(".advbox").animate({
+						top: "50%"
+					}, 100);
+					$(".closebtn").click(function() {
+						$(".advbox").fadeOut(500);
+					})
+//					$.cookie(COOKIE_NAME, 'ishide', {
+//						expires: 1
+//					}
+//					);
+				//}
+			});
+		</script>
+
+
+	</head>
+
+	<body>
+		<!--hello world!
+		<h3>this is h3</h3>
+		<span> a normal test</span>
+
+		<div id="column">
+			<h4>An h4 heading </h4>
+			<p>The heading and this paragraph........</p>
+
+		</div>-->
+		<div id="multi_drop_menus">
+			<ul>
+				<li><a href="#">Item 1</a>
+					<ul>
+						<li><a href="#">Item la</a></li>
+						<li><a href="#">Item 2</a></li>
+
+					</ul>
+				</li>
+				<li><a href="#">Item 2</a></li>
+			</ul>
+
+		</div>
+
+		<marquee style="font-size: 25px;color: #cc0000;">循环</marquee>
+		<div class="advbox">
+			<div class="advpic">
+				<img width="270" height="220" alt="" src="img/sort_asc_disabled.png" />
+				<a href="javascript:void(0);" class="closebtn">关闭</a>
+			</div>
+		</div>
+
+</html>

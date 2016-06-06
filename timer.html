@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Digital Clock</title>
+		<script>
+			function dispalyTime() {
+				var elt = document.getElementById("clock");
+				var now = new Date();
+				elt.innerHTML = now.toLocaleTimeString();
+				setTimeout(dispalyTime, 100);
+			}
+			showModalDialog("daf");
+			window.onload = dispalyTime;
+		</script>
+
+		<style>
+			#clock {
+				font: bold 24pt sans;
+				background: #ddf;
+				padding: 10px;
+				border: solid black 2px;
+				border-radius: 10px;
+			}
+		</style>
+
+		<script>
+			window.addEventListener("load", function() {}, false);
+			request.addEventListener("readystatechange", function() {}, false);
+			window.attachEvent("onload", function() {});
+
+			function onload(f) {
+				if (onload.loaded) {
+					window.setTimeout(f, 0);
+				} else
+				if (window.addEventListener) {
+					window.addEventListener("load", f, false);
+				} else
+				if (window.attachEvent) {
+					window.attachEvent("onload", f);
+				}
+			}
+			onload.LOADED = false;
+			onload(function() {
+				onload.LOADED = true;
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<script>
+		
+		   // showModalDialog("test");
+//			alert(document.compatMode);
+//			<!--[if IE 6]>
+//			This content is actually inside an HTML comment.
+//			It will only displayed in IE 6. < ![endif] -->
+//				<!--[if IE 7]>
+//			This content is actually inside an HTML comment.
+//			It will only displayed in IE 7. < ![endif] -->
+//			<!--[if IE]>
+//			This content is actually inside an HTML comment.
+//			It will only displayed in IE . < ![endif] -->
+		</script>
+		<h1>Digital Clock</h1>
+		<span id="clock"></span>
+
+		<a href="javascript:new Date().toLocaleTimeString();">
+       	what time is it?
+       </a>
+
+		<!--<a href='javascript:var e="", r="";	do{e=prompt("Expression:"+e+ "\n"+r+ "\n",e); try{ r="Result:" +eval(e); } catch(ex){r=ex;} } while(e); void 0; '>Javascript Evaluator</a>
+       -->
+
+		<h1>Table of Factorials</h1>
+		<script>
+			function factorial(n) {
+				if (n <= 1) return n;
+				else return n * factorial(n - 1);
+			}
+			document.write("<table>");
+			document.write("<tr><th>n</th><th>n!</th></tr>");
+			for (var i = 1; i <= 10; i++) {
+				document.write("<tr><td>" + i + "</td><td>" + factorial(i) + "</td></tr>");
+			}
+			document.write("</table>");
+			document.write("Generated at" + new Date());
+		</script>
+
+		<script>
+			function loadasync(url) {
+				var head = document.getElementsByTagName("head")[0];
+				var s = document.createElement("script");
+				s.src = url;
+				head.appendChild(s);
+			}
+		</script>
+
+		<script>
+			if (element.addEventListener) {
+				element.addEventListener("keydown", handler, false);
+				element.addEventListener("keypress", handler, false);
+			} else if (element.attachEvent) {
+				element.attachEvent("onkeydown", handler);
+				element.attachEvent("onkeypress", handler);
+			} else {
+				element.onkeydown = element.onkeypress = handler;
+			}
+		</script>
+
+	</body>
+
+</html>

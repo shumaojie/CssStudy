@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<style type="text/css">
+			body {
+				margin: 0px;
+				padding: 0px;
+				margin-top: 60px;
+				margin-bottom: 60px;
+			}
+			
+			#div_nav_zone_right {
+				position: absolute;
+				float: right;
+				z-index: 3;
+				width: 120px;
+				height: 100px;
+				right: 0px;
+				top: 332px;
+				background-color: #999;
+			}
+			
+			#div_nav_zone_right_bottom {
+				position: absolute;
+				float: right;
+				z-index: 3;
+				width: 120px;
+				height: 100px;
+				right: 0px;
+				top: 532px;
+				background-color: #CCC;
+			}
+			
+			#div_ul {
+				position: fixed;
+				height: 50px;
+			}
+			
+			ul,
+			li {
+				margin: 0px;
+			}
+			
+			li {
+				list-style: none;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				moveDiv(); //页面初始化执行 
+				$(window).scroll(function() {
+					moveDiv();
+					moveRightBottomDiv();
+				});
+			});
+			//右侧居中 
+			function moveDiv() {
+				var scrollTop = $(document).scrollTop(); //滚动条上端隐藏的高度 
+				var clientHeight = $(window).height(); //网页内容区高度 
+				//设置位置为 
+				var hei = $("#div_nav_zone_right").css("height");
+				hei = hei.replace("px", "");
+				var newPosY = scrollTop + (clientHeight - hei) / 2;
+				$("#div_nav_zone_right").css("top", newPosY + "px");
+			}
+			//右侧居下100像素 
+			function moveRightBottomDiv() {
+				var scrollTop = $(document).scrollTop(); //滚动条上端隐藏的高度 
+				var clientHeight = $(window).height(); //网页内容区高度 
+				//设置位置为 
+				var hei = $("#div_nav_zone_right_bottom").css("height");
+				hei = hei.replace("px", "");
+				var newPosY = clientHeight + scrollTop - hei - 100;
+				$("#div_nav_zone_right_bottom").css("top", newPosY + "px");
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>		
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>		
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div id="div_nav_zone_right">
+<iframe src="top1.html" frameBorder="0" width="900" scrolling="no" height="90"></iframe>
+		</div>
+
+		<div id="div_nav_zone_right_bottom">
+			<ul>
+				<li>边栏菜单1 </li>
+				<li>边栏菜单2 </li>
+				<li>边栏菜单3 </li>
+				<li>边栏菜单4 </li>
+			</ul>
+		</div>
+	</body>
+
+</html>

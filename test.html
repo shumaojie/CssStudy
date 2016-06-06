@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style>
+			.reveal *{display: none;}	
+			.reveal *.handle{display: block;}
+		</style>
+		
+		<!--<script><![CDATA[
+		//放在javascript代码
+		
+		
+		
+		
+		
+		]]></script>-->
+
+		<script>
+			window.onload=function(){
+				var elements=document.getElementsByClassName("reveal");
+				for(var i=0;i<elements.length;i++)
+				{
+					var elt=elements[i];
+					var title=elt.getElementsByClassName("handle")[0];
+					
+					addRevealHandler(title,elt);
+					
+					
+					
+				}
+				function  addRevealHandler(title,elt)
+				{
+					
+				  title.onclick=function(){
+				  	
+				  	if(elt.className=='reveal')
+				  	{
+				  		elt.name="revealed";
+				  	}
+				  	else
+				  	if(elt.name=="revealed")
+				  	{
+				  		
+				  		elt.className="reveal";
+				  	}
+				  	
+				  }
+					
+					
+				}
+				
+				
+				
+				
+				
+				
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<h1 class="handle">Click here to Reveal Hidden Text</h1>
+			<p> This Paragraph is hidden. It appears when you click on the title</p>
+
+		</div>
+
+	</body>
+
+</html>
