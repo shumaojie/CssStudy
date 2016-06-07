@@ -18,6 +18,8 @@
 2. float
 3. margin 
 4. div a 
+5. style 添加ID的作用
+6. style放在html中和保存在css文件中的区别
 
 
 
@@ -34,3 +36,4 @@
 2. 画竖线
 3. 画有倒角矩形
 4. 画圆
+5. 
